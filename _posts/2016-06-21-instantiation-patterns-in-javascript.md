@@ -253,6 +253,7 @@ Player.prototype.attack = function(enemy) {
     enemy.health -= 10;
   }
 }
+{% endhighlight %}
 
 The only catch to using the pseudoclassical pattern is, as I previously mentioned, we must now instantiate our objects using the new keyword.
 
