@@ -159,7 +159,7 @@ myplayer.level // still returns 50
 
 **Cons:** Extending the methods onto the player object is cumbersome, and introduces either a dependency or for us to write another function to handle the extension
 
-##Prototypal Instantiation
+## Prototypal Instantiation
 
 Prototypal instantiation takes advantage of the prototype property of our class to get around the need to extend our object. We achieve this by creating manually creating a prototypal delegation on our new object.
 
@@ -209,7 +209,7 @@ myplayer.level // still returns 50
 
 **Cons:** Unnecessarily verbose, requires that we manually create our delegation
 
-##Pseudoclassical Instantiation
+## Pseudoclassical Instantiation
 
 The pseudoclassical pattern is much like the prototypal pattern, but utilizes the new keyword during instantiation to remove excess code. How does it do this? The Javscript interpreter knows when it sees the keyword new that there are a couple of lines it should insert in your constructor.
 
@@ -262,6 +262,12 @@ var myPlayer = new Player(50, ['a sandwich or something']);
 myplayer.level // still returns 50
 {% endhighlight %}
 
+**Pros:** All the benefits of the prototypal pattern with less code
+
+**Cons:** Lack of object creation and return in our function can be confusing for anyone not used to seeing the new keyword
+
 <div class="divider"></div>
 
-So which pattern is best to use? It's really up to you! Each has its own benefits and drawbacks, and ultimately whichever one makes the most sense to you/your employer is your best bet. I tend to prefer the pseudoclassical style, as that most closely mimcs classes in many other languages. Making that relationship even tighter, ES6 introduced the class keyword, bringing much more standard class constructors to Javascript. No matter which pattern you use, *make sure not to forget to add blasters for arms*. Whatever that may mean in your code.
+So which pattern is best to use? It's really up to you! Each has its own benefits and drawbacks, and ultimately whichever one makes the most sense to you/your employer is your best bet.
+
+I tend to prefer the pseudoclassical style, as that most closely mimcs classes in many other languages. Making that relationship even tighter, ES6 introduced the class keyword, bringing much more standard class constructors to Javascript. No matter which pattern you use, *make sure not to forget to add blasters for arms*. Whatever that may mean in your code.
